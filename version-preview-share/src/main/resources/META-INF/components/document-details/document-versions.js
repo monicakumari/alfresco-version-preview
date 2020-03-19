@@ -1,5 +1,3 @@
-
-
 /**
  * Document Details Version component.
  *
@@ -220,12 +218,8 @@
        */
       getDocumentVersionMarkup: function DocumentVersions_getDocumentVersionMarkup(doc)
       {
-    	 // http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root?objectId=workspace://SpacesStore/1a0b110f-1e09-4ca2-b367-fe25e4964a4e&cmisselector=versions
-    	 // find  "value": "versionStore://version2Store/356fd50f-08f5-4324-9132-d43ea539125a"
-    	  
     	 //var versionsDiffURL = Alfresco.constants.URL_PAGECONTEXT + 'site/' + this.options.siteId +'/versions-difference?nodeRef=' + this.options.nodeRef + '&amp;versRef=' + doc.nodeRef;
-    	 //var versionsDiffURL = Alfresco.constants.URL_PAGECONTEXT + 'versions-difference?nodeRef=' + this.options.nodeRef + '&amp;versRef=' + doc.nodeRef;
-    	 var versionPreviewURL = "http://localhost:8081/share/page/document-details?nodeRef=versionStore://version2Store/356fd50f-08f5-4324-9132-d43ea539125a";
+    	 var versionPreviewURL = Alfresco.constants.URL_PAGECONTEXT + "document-details?nodeRef=" + doc.nodeRef;
     	 var downloadURL = Alfresco.constants.PROXY_URI + '/api/node/content/' + doc.nodeRef.replace(":/", "") + '/' + doc.name + '?a=true',
             html = '';
 
